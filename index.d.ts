@@ -60,8 +60,4 @@ declare namespace OttomanJS {
     }
 }
 
-declare module 'ottoman' {
-    // bucket and model intentionally not exposed (singletons are baaaaad.)
-    let Ottoman: OttomanJS.Ottoman
-    let StoreAdapter: OttomanJS.StoreAdapter
-}
+export = OttomanJS
