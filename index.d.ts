@@ -3,12 +3,14 @@
 import { Bucket, CouchbaseError  } from "couchbase";
 
 declare namespace OttomanJS {
-  class CbStoreAdapter {
-    constructor(bucket: Bucket)
+  class StoreAdapter {
+    constructor (bucket: Bucket)
+    store (key: string, data: object, cas: object, callback: any): any
   }
 
-  class StoreAdapter {
-    constructor(bucket: Bucket)
+  class CbStoreAdapter {
+    constructor (bucket: Bucket)
+    store (key: string, data: object, cas: object, callback: any): any
   }
 
   interface Model {
@@ -58,9 +60,9 @@ declare namespace OttomanJS {
     readonly delayedBind: { [key: string]: Function | undefined }
     readonly plugins: Array<[Function, object]>
 
-      constructor (options: OttomanOptions)
+    constructor (options: OttomanOptions)
 
-    model(key: string, schema: Schema, index: Indices): Model
+    model (key: string, schema: Schema, index: Indices): Model
   }
 }
 
