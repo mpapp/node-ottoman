@@ -101,7 +101,7 @@ declare namespace OttomanJS {
     constructor (options: OttomanOptions)
 
     model (key: string, schema: SchemaDefinition, options: ModelOptions): ModelInstanceCtor
-    ensureIndices (callback: Function): void
+    ensureIndices (DeferBuild: boolean, callback: Function): void
   }
 }
 
