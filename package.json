@@ -22,7 +22,7 @@
     "uuid": "~2.0.1"
   },
   "optionalDependencies": {
-    "couchbase": "~2.4.1"
+    "couchbase": "~2.4.6"
   },
   "devDependencies": {
     "@types/couchbase": "^2.1.30",
